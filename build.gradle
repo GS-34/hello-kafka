@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation group: 'org.apache.kafka', name: 'kafka-clients', version: '2.5.0'
+
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+
+    implementation('ch.qos.logback:logback-classic:1.2.9')
+    implementation('ch.qos.logback:logback-core:1.2.9')
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
